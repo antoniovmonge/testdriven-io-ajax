@@ -30,9 +30,10 @@ function getAllTodos(url) {
       (data.context).forEach(todo => {
         const todoHTMLElement = `
         <li>
-          <p>Task: ${todo.task}</p>
+          <p>${todo.id} Task: ${todo.task}</p>
           <p>Completed?: ${todo.completed}</p>
-        </li>`
+        </li>
+        <hr>`
         todoList.innerHTML += todoHTMLElement;
       });
     });
